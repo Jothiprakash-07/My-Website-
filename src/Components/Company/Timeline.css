@@ -1,0 +1,128 @@
+/* RESET */
+
+/* SECTION */
+.timeline-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.subtitle {
+  color: #ff7a2f;
+  font-weight: 600;
+}
+
+.titles {
+  color: chocolate;
+  font-size: 32px;
+  margin: 10px 0 60px;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  max-width: autopx;
+  margin: auto;
+}
+
+/* CENTER LINE */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #f0b08a;
+  transform: translateX(-50%);
+}
+
+/* ITEM */
+.timeline-item {
+  width: 50%;
+  padding: 20px 40px;
+  position: relative;
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.7s ease;
+}
+
+/* SHOW ON SCROLL */
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LEFT / RIGHT */
+.timeline-item.left {
+  left: 0;
+  text-align: left;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* DOT */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 32px;
+  width: 14px;
+  height: 14px;
+  background: #ff7a2f;
+  border-radius: 50%;
+}
+
+.timeline-item.left::after {
+  right: -7px;
+}
+
+.timeline-item.right::after {
+  left: -7px;
+}
+
+/* CARD */
+.t-card {
+  background: #ffd3b5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.t-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.t-card span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 10px;
+    text-align: left;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::after {
+    left: 1px;
+  }
+}

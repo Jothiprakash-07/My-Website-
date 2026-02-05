@@ -1,0 +1,192 @@
+/* ===== Animations ===== */
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease forwards;
+}
+
+.delay {
+  animation-delay: 0.3s;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* css*/
+.about {
+  margin: 10 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #1f2933;
+}
+
+.title {
+  color: chocolate;
+  font-size: 42px;
+  margin-bottom: 16px;
+  position: relative;
+    
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: chocolate;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.summary h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 30px 0 20px;
+}
+
+.contend {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+  text-align: justify;
+ 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .summary h3 {
+    font-size: 20px;
+  }
+
+  .contend {
+    font-size: 16px;
+  }
+}
+
+/* card design code*/
+
+/* Grid */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 10 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Grid */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 0 auto;
+  padding: 40px 10px;
+}
+
+/* Card */
+.principle-card {
+  padding: 28px;
+  border: 1.5px solid chocolate;
+  border-radius: 12px;
+  background-color: #ffffff;
+
+  /* IMPORTANT for smooth up & down */
+  transform: translateY(0);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Hover → card goes UP */
+.principle-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Number */
+.number {
+  width: 48px;
+  height: 48px;
+  background-color: chocolate;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+/* Number reacts on hover */
+.principle-card:hover .number {
+  transform: scale(1.1);
+}
+
+/* Title */
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: chocolate;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b4b4b;
+}
+
+
+/* under line*/
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background-color: chocolate;
+  margin: 40px 20;
+  border-radius: 20px;
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}

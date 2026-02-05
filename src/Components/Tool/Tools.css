@@ -1,0 +1,106 @@
+.tools {
+  padding: 60px 20px;
+  text-align: center;
+  
+  
+}
+
+.tools-title {
+  font: 18px;;
+  color: chocolate;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Border container */
+.tools-box {
+  border: 1px solid rgb(250, 145, 70);
+  border-radius: 16px;
+  padding: 60px 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Tool item */
+.tool-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+/* Icon */
+.tool-item img {
+  width: 56px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Text */
+.tool-item span {
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.4s ease;
+}
+
+/* Hover effects */
+.tool-item:hover {
+  transform: translateY(-8px);
+}
+
+.tool-item:hover img {
+  transform: scale(1.15) rotate(-6deg);
+  filter: drop-shadow(0 6px 14px rgb(247, 153, 85));
+}
+
+.tool-item:hover span {
+  color: rgb(245, 203, 174);
+}
+
+/* Animated underline */
+.tool-item::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: chocolate;
+  transition: width 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.tool-item:hover::after {
+  width: 100%;
+}
+
+/* ========================= */
+/* Responsive */
+/* ========================= */
+@media (max-width: 768px) {
+  .tools-box {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .tool-item img {
+    width: 32px;
+  }
+
+  .tool-item span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tool-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

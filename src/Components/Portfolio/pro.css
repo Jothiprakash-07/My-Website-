@@ -1,0 +1,258 @@
+.portfolio-header {
+  display: flex;                 /* Side-by-side layout */
+  align-items: center;           /* Vertically center items */
+  justify-content: space-between;/* Space between text and button */
+  padding: 10px 20px;            /* Inner spacing */
+  font-family: Arial, sans-serif;
+}
+/* Left text container */
+.header-text {
+  max-width: auto;              /* Limit text width */
+}
+
+/* Portfolio label */
+.portfolio-label {
+  font-size: 24px ;
+  color: chocolate;                
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;                /* New line */
+  margin-bottom: 6px;
+}
+
+/* Description text */
+.header-text p {
+  color: #333;
+  font-size: 18px;
+  width: 100%;
+}
+
+/* Button style */
+.behance-btn {
+   text-decoration: none;
+  color: chocolate;
+  border: 1px solid chocolate;      
+  background: transparent;       /* No background */
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;     /* Smooth hover */
+}
+
+/* Button hover */
+.behance-btn:hover {
+  background: chocolate;
+  color: white;
+}
+
+/* 📱 Mobile view */
+@media (max-width: 768px) {
+  .portfolio-header {
+    flex-direction: column;      /* Stack vertically */
+    align-items: flex-start;     /* Align left */
+    gap: 12px;                   /* Space between items */
+  }
+
+  .behance-btn {
+    align-self: flex-start;      /* Button stays left */
+  }
+}
+
+/*card*/
+
+
+/* card container */
+.b-card {
+  margin:20px;
+  padding: 50;
+  display: flex;
+  background: #FFC59C;
+  border-radius: 12px;
+  overflow: hidden;
+  width: auto;
+  
+}
+
+/* image section */
+.card-image {
+  width: 50%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* content section */
+.card-content {
+  width: 50%;
+  padding: 40px;
+  position: relative;
+}
+
+/*=====*/
+/* text */
+.card-content h2 {
+  padding: 10;
+  margin-bottom: 15px;
+  font-size: 28px;
+  text-align: justify;
+}
+.card-content h4{
+  padding: 10;
+  margin-top: 15px;
+  text-align: justify;
+}
+
+.card-content p {
+  color: #353434;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* buttons */
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.btn1{
+  padding-top:20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ------------------ */
+/* Animation */
+/* ------------------ */
+/* Header entry animation */
+.portfolio-header {
+  animation: fadeDown 0.9s ease forwards;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text animation */
+.header-text {
+  animation: fadeLeft 1s ease forwards;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.behance-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow slide effect */
+.behance-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.b-card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Lift card */
+.b-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 768px) {
+  .b-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .b-card:hover .card-image img {
+    transform: none;
+  }
+}
+
+
+
+
+/* ------------------ */
+/* RESPONSIVE DESIGN */
+/* ------------------ */
+
+@media (max-width: 768px) {
+  .b-card{
+    width: auto;
+    align-items: center;
+    flex-direction: column;
+  }
+  .card {
+    flex-direction: column;
+  }
+
+  .card-image,.card-content {
+    width: 50%;
+    height: 50%;
+    
+  }
+
+ .card-content {
+    padding: 10px;
+    text-align: justify;
+    font-size: 12px;
+
+  }
+
+  .card-content h2{
+    width: 100%;
+    font-size: 18px;
+    text-align: start;
+    
+  }
+  .card-content p{
+    width: 100%;
+    font-size: 12px;
+    text-align: justify;
+    
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+  .behance-btn{
+    font-size: 10px;
+  }
+}
+
