@@ -27,7 +27,7 @@ function Pro() {
             <div className="b-card">
                 {/* LEFT IMAGE */}
                 <div className="card-image">
-                    <img src="./photo/Protfolio/Frame 112.png" alt="landing page"/>
+                    <img src="./photo/Protfolio/frame-112.png" alt="landing page"/>
                 </div>
 
                 {/* RIGHT CONTENT */}
@@ -97,7 +97,7 @@ function Pro() {
                 </div>
                 {/* RIGHT IMAGE */}
                 <div className="card-image">
-                    <img  src="./photo/Protfolio/Frame 27.png" alt="cat"/>
+                    <img  src="./photo/Protfolio/frame-27.png" alt="cat"/>
                 </div>
                 
             </div>

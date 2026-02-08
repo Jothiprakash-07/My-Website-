@@ -9,6 +9,23 @@
   font-family: Arial, sans-serif;
   padding: 20px;
 }
+.footer-contact {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-contact a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-contact a:hover {
+  color: #fff;
+}
+
 
 /* WRAPPER */
 .footer-wrapper {

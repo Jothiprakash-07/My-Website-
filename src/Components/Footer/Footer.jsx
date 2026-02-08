@@ -13,6 +13,16 @@ const FooterPage = () => {
           UI/UX Designer & Frontend Developer crafting elegant and meaningful
           digital experiences.
         </p>
+        {/* CONTACT INFO */}
+        <div className="footer-contact">
+          <a href="mailto:jothiprakash.jo07@gmail.com">
+            Mail ID :jothiprakash.jo07@gmail.com
+          </a>
+          <a href="tel:+917904158379">
+             Phone no: +91 7904158379
+          </a>
+        </div>
+        
 
         {/* NAV *
         <nav className="footer-nav">
@@ -24,9 +34,9 @@ const FooterPage = () => {
 
         {/* SOCIAL */}
         <div className="footer-social">
-          <a href="#">LinkedIn</a>
-          <a href="#">Behance</a>
-          <a href="#">GitHub</a>
+          <a href="https://www.linkedin.com/in/jothi-prakash-s-2b1488302/">LinkedIn</a>
+          <a href="https://www.behance.net/jothi07">Behance</a>
+          <a href="https://github.com/Jothiprakash-07">GitHub</a>
         </div>
 
 

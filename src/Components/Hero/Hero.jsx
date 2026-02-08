@@ -20,7 +20,7 @@ const Hero = () => {
 
       {/* Person Image */}
       <img
-        src="./photo/Profile/my pic.png"
+        src="./photo/Profile/my-pic.png"
         alt="Person"
         className={`hero-image ${animate ? 'image-zoom' : ''}`}
       />
