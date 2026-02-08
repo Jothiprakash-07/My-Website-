@@ -16,10 +16,10 @@ const FooterPage = () => {
         {/* CONTACT INFO */}
         <div className="footer-contact">
           <a href="mailto:jothiprakash.jo07@gmail.com">
-            Mail ID :jothiprakash.jo07@gmail.com
+            Mail ID:jothiprakash.jo07@gmail.com
           </a>
           <a href="tel:+917904158379">
-             Phone no: +91 7904158379
+             Phone no: +91 79041 58379
           </a>
         </div>
         
